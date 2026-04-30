@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop - Tempat Nyaman Untuk Bersantai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        utama: '#16A34A',
+                        sekunder: '#0284C7',
+                        terang: '#F0FDF4',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .fade-in {
+                animation: fadeIn 0.8s ease-in;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAVBAR -->
+    <header class="bg-utama text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold flex items-center gap-2">
+                <i class="fa fa-coffee"></i> COFFEE SHOP
+            </h1>
+            <nav class="hidden md:flex gap-6 font-medium">
+                <a href="#tentang" class="hover:text-yellow-200 transition">Tentang Kami</a>
+                <a href="#menu" class="hover:text-yellow-200 transition">Daftar Menu</a>
+                <a href="#data-usaha" class="hover:text-yellow-200 transition">Data Usaha</a>
+            </nav>
+            <button class="md:hidden text-white text-lg">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- BANNER UTAMA -->
+    <section class="bg-gradient-to-r from-utama/90 to-sekunder/90 text-white py-16 px-4 fade-in">
+        <div class="container mx-auto text-center">
+            <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-bold mb-3">Nikmati Kopi & Minuman Segar Pilihan</h2>
+            <p class="text-[clamp(1rem,3vw,1.2rem)] max-w-2xl mx-auto opacity-90 mb-6">
+                Tempat nyaman cocok untuk nongkrong, bekerja maupun bersantai. Menggunakan bahan berkualitas dengan rasa yang terjamin.
+            </p>
+            <p class="inline-block bg-white text-utama font-semibold px-6 py-2 rounded-full shadow-md">
+                <i class="fa fa-clock-o mr-2"></i> Buka Setiap Hari : 06.00 - 22.00
+            </p>
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section id="tentang" class="py-14 px-4 bg-white">
+        <div class="container mx-auto">
+            <h3 class="text-[clamp(1.4rem,4vw,2rem)] font-bold text-center text-utama mb-8">Tentang Usaha Kami</h3>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        Kami menghadirkan berbagai varian kopi kekinian dan juga minuman segar dari buah-buahan pilihan. Semua bahan yang kami gunakan dipilih dengan teliti untuk menghasilkan rasa terbaik.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Tempat kami didesain dengan konsep yang menarik dan nyaman. Baik kamu datang sendiri untuk bekerja, maupun bersama teman dan keluarga untuk bersantai, tempat kami selalu menjadi pilihan yang tepat.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <span class="bg-terang text-utama px-4 py-1 rounded-full text-sm font-medium">✅ Bahan Berkualitas</span>
+                        <span class="bg-terang text-utama px-4 py-1 rounded-full text-sm font-medium">✅ Harga Terjangkau</span>
+                        <span class="bg-terang text-utama px-4 py-1 rounded-full text-sm font-medium">✅ Tempat Nyaman</span>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1501339847302-23d8f5529828?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
+                         alt="Suasana Coffee Shop" class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAFTAR MENU -->
+    <section id="menu" class="py-14 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <h3 class="text-[clamp(1.4rem,4vw,2rem)] font-bold text-center text-utama mb-2">Daftar Menu Kami</h3>
+            <p class="text-center text-gray-600 mb-10">Pilihan minuman yang bisa kamu nikmati kapan saja</p>
+
+            <!-- KOPI & MINUMAN -->
+            <h4 class="text-xl font-semibold text-sekunder mb-5 border-l-4 border-sekunder pl-3">☕ Kopi & Minuman</h4>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+
+                <!-- 1. ESPRESSO -->
+                <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Espresso" class="h-48 w-full object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Espresso</h5>
+                        <p class="text-gray-600 text-sm my-2">Kopi hitam pekat dengan rasa kuat dan aroma khas.</p>
+                        <p class="text-utama font-semibold text-lg">Rp 15.000</p>
+                    </div>
+                </div>
+
+                <!-- 2. AMERICANO -->
+                <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+                    <img src="https://images.unsplash.com/photo-1550950191-9f3cc050926a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Americano" class="h-48 w-full object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Americano</h5>
+                        <p class="text-gray-600 text-sm my-2">Espresso yang dicampur air panas, rasa lebih ringan.</p>
+                        <p class="text-utama font-semibold text-lg">Rp 18.000</p>
+                    </div>
+                </div>
+
+                <!-- 3. CAPPUCCINO -->
+                <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+                    <img src="https://images.unsplash.com/photo-1534778101979-699286788d3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Cappuccino" class="h-48 w-full object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Cappuccino</h5>
+                        <p class="text-gray-600 text-sm my-2">Perpaduan espresso, susu, dan busa yang lembut.</p>
+                        <p class="text-utama font-semibold text-lg">Rp 22.000</p>
+                    </div>
+                </div>
+
+                <!-- 4. LATTE -->
+                <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+                    <img src="https://images.unsplash.com/photo-1570968915888-86906160c879?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Latte" class="h-48 w-full object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Latte</h5>
+                        <p class="text-gray-600 text-sm my-2">Kopi dengan susu lebih banyak, rasa lembut dan creamy.</p>
+                        <p class="text-utama font-semibold text-lg">Rp 23.000</p>
+                    </div>
+                </div>
+
+                <!-- 5. KOPI SUSU GULA AREN -->
+                <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+                    <img src="https://images.unsplash.com/photo-1611522058880-00a99b26c90f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Kopi Susu Gula Aren" class="h-48 w-full object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Kopi Susu Gula Aren</h5>
+                        <p class="text-gray-600 text-sm my-2">Rasa manis alami dari gula aren, menjadi favorit pelanggan.</p>
+                        <p class="text-utama font-semibold text-lg">Rp 20.000</p>
+                    </div>
+                </div>
+
+                <!-- 6. MATCHA LATTE -->
+                <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+                    <img src="https://images.unsplash.com/photo-1515823662972-da48e2985a3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Matcha Latte" class="h-48 w-full object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Matcha Latte</h5>
+                        <p class="text-gray-600 text-sm my-2">Minuman teh hijau khas Jepang, rasa unik dan menyegarkan.</p>
+                        <p class="text-utama font-semibold text-lg">Rp 25.000</p>
+                    </div>
+                </div>
+
+                <!-- 7. CHOCOLATE -->
+                <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+                    <img src="https://images.unsplash.com/photo-1544745795-96629b96c524?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Chocolate" class="h-48 w-full object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Chocolate</h5>
+                        <p class="text-gray-600 text-sm my-2">Minuman cokelat manis, cocok untuk kamu yang tidak suka kopi.</p>
+                        <p class="text-utama font-semibold text-lg">Rp 22.000</p>
+                    </div>
+                </div>
+
+                <!-- 8. ICE LEMON TEA -->
+                <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+                    <img src="https://images.unsplash.com/photo-1556742524-386418b3d3f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Ice Lemon Tea" class="h-48 w-full object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Ice Lemon Tea</h5>
+                        <p class="text-gray-600 text-sm my-2">Teh dingin segar dengan perasan jeruk lemon asli.</p>
+                        <p class="text-utama font-semibold text-lg">Rp 15.000</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- JUS BUAH -->
+            <h4 class="text-xl font-semibold text-sekunder mb-5 border-l-4 border-sekunder pl-3">🍹 Jus Buah Segar</h4>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+
+                <!-- 9. JUS ALPUKAT -->
+                <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+                    <img src="https://images.unsplash.com/photo-1621591532345-45b160cb2b8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Jus Alpukat" class="h-48 w-full object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Jus Alpukat</h5>
+                        <p class="text-gray-600 text-sm my-2">Tekstur lembut, rasa manis alami dan kaya nutrisi.</p>
+                        <p class="text-utama font-semibold text-lg">Rp 18.000</p>
+                    </div>
+                </div>
+
+                <!-- 10. JUS MANGGA -->
+                <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+                    <img src="https://images.unsplash.com/photo-1574938886444-15a9d8d2969d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Jus Mangga" class="h-48 w-full object-cover">
+                    <div class="p-4">
+                        <h5 class="font-bold text-lg">Jus Mangga</h5>
+                        <p class="text-gray-600 text-sm my-2">Rasa manis segar dengan sedikit asam khas buah mangga.</p>
+                        <p class="text-utama font-semibold text-lg">Rp 15.000</p>
+                    </div>
+                </div>
+
+                <!-- 11. JUS MELON -->
+                <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-all hover:-translate-y-1 fade-in">
+                    <img src="https://images.unsplash.com/photo-1616684006015-4220c2716649?ixlib=rb
+              
